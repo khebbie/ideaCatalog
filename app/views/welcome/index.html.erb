@@ -10,6 +10,7 @@
 <div id="tag_cloud">
 <h2>Kategorier</h2>
   <% tag_cloud Idea.tag_counts, %w[s m l] do |tag, css_class| %>
+  <% css_class = css_class + " label label-primary" %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
     <br/>
   <% end %>
