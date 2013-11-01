@@ -1,0 +1,10 @@
+<h1>Mig - Møde - Missionshus</h1>
+<p>
+	Nedenfor kan du finde de forskellige kategorier af ideer, bare kig rundt og føl dig inspireret
+
+</p>
+<div id="tag_cloud">
+  <% tag_cloud Idea.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
