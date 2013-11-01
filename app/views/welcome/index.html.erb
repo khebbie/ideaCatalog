@@ -1,14 +1,25 @@
 <h1>Mig - Møde - Missionshus</h1>
 <p>
-	Nedenfor kan du finde de forskellige kategorier af ideer, bare kig rundt og føl dig inspireret
+	Denne hjemmeside er et referat af mødet i Stjær Galten missionshus d. 25. november 2012 - mødet havde titlen "Mig - Møde - Missionhus"<br/>
+	Der kom mange ideer frem på mødet - som forsøges fremstillet på dette møde<br/>
+	Jeg har forsøgt at fordele ideerne på de teams som har ansvaret for dem, det har jeg kaldt "kategorier"<br/>
+	Nedenfor kan du se de forskellige kategorier, hvis du klikker på dem, vil du se ideer for de specifikke områder<br/>
+	Vil du se alle ideer skal du klikke i menuen foroven
 
 </p>
 <div id="tag_cloud">
+<h2>Kategorier</h2>
   <% tag_cloud Idea.tag_counts, %w[s m l] do |tag, css_class| %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
     <br/>
   <% end %>
-
-  <img src="assets/bethesda.jpg"/>
   <%= link_to 'Alle ideer', ideas_path %>
+<br/>
+<hr>
+  <img src="assets/bethesda.jpg"/>
+  
 </div>
+<div class="span3">
+        <h2>Om Mig - Møde - Missionshus</h2>
+       Jeg har forsøgt at fordele relevant output på dem som bør tage ansvar for det, men andre er naturligvis velkomne til at tage ansvar for vores alle sammens fællesskab
+      </div>

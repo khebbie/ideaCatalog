@@ -3,32 +3,35 @@
 <h2>Kategorier</h2>
   <% tag_cloud Idea.tag_counts, %w[s m l] do |tag, css_class| %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+    <br/>
   <% end %>
 </div>
+<hr>
+<p>
 <table>
   <tr>
     <th>Titel</th>
     
     <th>kategori</th>
     <th></th>
-    <th></th>
+
     <th></th>
   </tr>
 
 <% @ideas.each do |idea| %>
   <tr>
-    <td><%= idea.titel %></td>
+    <td><strong><%= link_to idea.titel, idea %></strong></td>
    
     <td>
       <%= raw idea.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </td>
-    <td><%= link_to 'Vis', idea %></td>
+    
     <td><%= link_to 'Redigér', edit_idea_path(idea) %></td>
     <td><%= link_to 'Slet', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
+</p>
 <br />
 
 <%= link_to 'Ny ide', new_idea_path %>
