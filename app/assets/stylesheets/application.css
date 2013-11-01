@@ -9,10 +9,19 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require_tree
+ *= require bootstrap
+ *= require bootstrap-theme
  */
 
- 
+ body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+
+}
+
 #tag_cloud {
   width: 400px;
   line-height: 1.6em;
