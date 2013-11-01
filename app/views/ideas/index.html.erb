@@ -8,14 +8,15 @@
 </div>
 <hr>
 <p>
+Nedenfor er en liste af ideer, klik på titlen for at se mere
 <table>
   <tr>
     <th>Titel</th>
     
     <th>kategori</th>
-    <th></th>
+    <th hidden></th>
 
-    <th></th>
+    <th hidden></th>
   </tr>
 
 <% @ideas.each do |idea| %>
@@ -26,8 +27,8 @@
       <%= raw idea.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </td>
     
-    <td><%= link_to 'Redigér', edit_idea_path(idea) %></td>
-    <td><%= link_to 'Slet', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td hidden><%= link_to 'Redigér', edit_idea_path(idea) %></td>
+    <td hidden><%= link_to 'Slet', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
