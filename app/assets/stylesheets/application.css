@@ -24,7 +24,7 @@
 
 #tag_cloud {
   width: 400px;
-  line-height: 1.6em;
+  line-height: 2.2em;
   .s { font-size: 1.2em; }
   .m { font-size: 1.4em; }
   .l { font-size: 2.0em; }
